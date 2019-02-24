@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment_4;
+package lab_8;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -39,14 +39,14 @@ public class DataReader {
     }
     
     public String[] getFileHeader() throws IOException{
-        if(header==null){
-        String line = "";
-        if((line = reader.readLine()) != null){
-            String[] rows = line.split(",");
-            return rows;
+        if(header == null){
+            String line = "";
+            if((line = reader.readLine()) != null){
+                String[] rows = line.split(",");
+                header = rows;
+            }
         }
-       
+        return header;
     }
-         return null;
-    }
+    
 }
